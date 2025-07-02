@@ -1,0 +1,27 @@
+# Rust
+/target/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+*.tmp
+
+# Test files
+test_*.vna
+*_test.vna
+
+# Generated PDFs (optional - you may want to commit examples)
+*.pdf
+
+# Archive (optional - may want to keep in git)
+# archive/
