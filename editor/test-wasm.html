@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test WASM Parser</title>
+</head>
+<body>
+  <h1>VNA WASM Parser Test</h1>
+  <div id="output"></div>
+  
+  <script type="module">
+    import init, { VnaParser } from '/pkg/vna.js';
+    
+    async function test() {
+      const output = document.getElementById('output');
+      
+      try {
+        await init('/pkg/vna_bg.wasm');
+        const parser = new VnaParser();
+        
+        const vnaContent = `---
+title: "Test"
+raga: "mohanam"
+tala: "adi"
+---
+
+[pallavi]
+G,G, R,,, ||\
+ninn ukō- ||`;
+        
+        const doc = parser.parse(vnaContent);
+        const issues = parser.validate(vnaContent);
+        const formatted = parser.format(vnaContent);
+        
+        output.innerHTML = `
+          <h3>Parse Result:</h3>
+          <pre>${JSON.stringify(doc, null, 2)}</pre>
+          
+          <h3>Validation Issues:</h3>
+          <pre>${JSON.stringify(issues, null, 2)}</pre>
+          
+          <h3>Formatted:</h3>
+          <pre>${formatted}</pre>
+        `;
+      } catch (error) {
+        output.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+      }
+    }
+    
+    test();
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.file-controls {
+  padding: 20px;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.file-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0066cc;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.file-label:hover {
+  background: #0052a3;
+}

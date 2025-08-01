@@ -1,0 +1,74 @@
+[package]
+name = "vna"
+version = "0.1.0"
+edition = "2021"
+authors = ["Claude Code <claude@anthropic.com>"]
+description = "Veena Notation Archive - A structured notation system for Carnatic music"
+license = "MIT"
+repository = "https://github.com/your-repo/veena-notation"
+keywords = ["music", "carnatic", "veena", "notation", "lsp"]
+categories = ["command-line-utilities", "text-processing"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[package.metadata.wasm-pack]
+"wasm-opt" = ["-O3", "--enable-simd"]
+
+[[bin]]
+name = "vna"
+path = "src/main.rs"
+required-features = ["cli"]
+
+[dependencies]
+# Core dependencies (always needed)
+anyhow = "1.0"
+thiserror = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_yaml = "0.9"
+regex = "1.9"
+unicode-segmentation = "1.10"
+shlesha = "*"
+
+# CLI framework (optional)
+clap = { version = "4.4", features = ["derive"], optional = true }
+
+# File handling (CLI only)
+walkdir = { version = "2.4", optional = true }
+glob = { version = "0.3", optional = true }
+
+# PDF generation (CLI only)
+printpdf = { version = "0.6", optional = true }
+ab_glyph = { version = "0.2", optional = true }
+
+# LSP support (CLI only)
+tower-lsp = { version = "0.20", optional = true }
+tokio = { version = "1.0", features = ["full"], optional = true }
+
+# Colors and formatting (CLI only)
+colored = { version = "2.0", optional = true }
+indicatif = { version = "0.17", optional = true }
+
+# Logging (CLI only)
+env_logger = { version = "0.10", optional = true }
+log = { version = "0.4", optional = true }
+
+# WASM support
+wasm-bindgen = { version = "0.2", optional = true }
+serde-wasm-bindgen = { version = "0.6", optional = true }
+console_error_panic_hook = { version = "0.1", optional = true }
+web-sys = { version = "0.3", features = ["console"], optional = true }
+
+[dev-dependencies]
+pretty_assertions = "1.4"
+tempfile = "3.8"
+
+[features]
+default = ["cli"]
+cli = [
+    "clap", "colored", "indicatif", "env_logger", "log",
+    "walkdir", "glob", "printpdf", "ab_glyph",
+    "tower-lsp", "tokio"
+]
+wasm = ["wasm-bindgen", "serde-wasm-bindgen", "console_error_panic_hook", "web-sys"]

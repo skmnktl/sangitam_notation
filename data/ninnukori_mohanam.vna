@@ -1,0 +1,53 @@
+---
+title: "ninnukōri"
+raga: "mohana"
+tala: "+234+0+0"
+composer: "rāmanāthapuraṃ śrīnivāsa aiyangār"
+language: "telugu"
+gati: 4
+type: "varṇa"
+---
+
+# Ninnukori Varnam in Mohanam
+
+[pallavi]
+G,G,      R,,,  | SSRR  GGRR | SRGR     SRSD. | SRGP    GRSR  ||
+`nin`-nu- kō--- | ri--- ---- | `yun`--- nā--- | `nu`--- rā--- ||
+
+GPGG  RSRG   | RRSD. SRGR  | GPG:3 PDP:3 DS':2 | DDPG DPGR   ||
+ni--- --khi- | ----  la--- | lō--  ka--  nā-   | ---- ya-ka- ||
+
+[anupallavi]
+G,G,      P,,,   | GGPP   DDP, | DS'DD  PGDP  | DGDP GRSR ||
+`nann`--- upā--- | lim--- --pa | sa-ma- ya--- | murā ---- ||
+
+GGPP  DPDS'  | DS'R'S' G'R',S' | DS'R'S' ,DPD  | S'D,P GRSR ||
+nā--- mī-da- | kṟu---  pa---   | jū---   -ḍa-- | rā--- ---- ||
+
+[muktayisvaram]
+G,RG RSR, | SRSG RGSR | SD.SR GRGP | GPD, P,,, ||
+---- ---- | ---- ---- | ----- ---- | ---- ---- ||
+
+GPDP DS'R'G' | R',G'S' ,R'D, | S'P,D S'R'G'S' | ,DP, GRSR ||
+---- ----- | ------- ----- | ----- ------- | ---- ---- ||
+
+[charanam]
+G,G, GPGR | RGPG P,,, | GGDD P,GG | DPGP GRSR ||
+sann utā- | nga- śrī- | ṉivā sā-- | ---- ---- ||
+
+[cittasvarams]
+# 1.
+G,,, ,,,R | ,S,R ,,D., | ,RD., S,,R | ,,GR ---- ||
+---- ---- | ---- ----- | ----- ---- | ---- ---- ||
+# 2.
+G,GR GRSR | G,G.P D.D.SR | G,GG DPGR | G,GS' DPGR ||
+---- ---- | ----- ------ | ---- ---- | ----- ---- ||
+# 3.
+P,DD P,GR | S,RG R,SD. | S,RG P,D, | S'S',D P,GR ||
+---- ---- | ---- ----- | ---- ---- | ------ ---- ||
+# 4.
+S',R'G' R'S'R'S' | DS'DP GRSR | S,,, ,SSR | RGGP PPDD ||
+---- -------- | ----- ---- | ---- ---- | ---- ---- ||
+
+S'R'G'R' G'R'DS' | R'S'R'S' PDS'D | S'DGP DPDP | R'S'DP GRSR ||
+---- ---- | -------- ----- | ----- ---- | ------ ---- ||

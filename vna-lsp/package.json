@@ -1,0 +1,21 @@
+{
+  "name": "vna-parser-wasm",
+  "version": "0.1.0",
+  "description": "WebAssembly bindings for the VNA parser",
+  "main": "pkg/vna_parser_wasm.js",
+  "types": "pkg/vna_parser_wasm.d.ts",
+  "scripts": {
+    "build:wasm": "wasm-pack build --target web --out-dir pkg --features wasm",
+    "build:node": "wasm-pack build --target nodejs --out-dir pkg-node --features wasm"
+  },
+  "files": [
+    "pkg/**/*"
+  ],
+  "keywords": [
+    "vna",
+    "carnatic",
+    "music",
+    "parser",
+    "wasm"
+  ]
+}
